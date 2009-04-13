@@ -169,15 +169,15 @@
             switch (indexPath.row) {
                 case 0:
                     cc = [ContainerCell containerCell:@"カード種別" tableView:tableView];
-                    [cc attachView:userTypeField];
+                    cc.attachedView = userTypeField;
                     break;
                 case 1:
                     cc = [ContainerCell containerCell:@"ユーザID" tableView:tableView];
-                    [cc attachView:userIdField];
+                    cc.attachedView = userIdField;
                     break;
                 case 2:
                     cc = [ContainerCell containerCell:@"パスワード" tableView:tableView];
-                    [cc attachView:passwordField];
+                    cc.attachedView = passwordField;
                     break;
             }
             break;
