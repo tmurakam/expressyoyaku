@@ -188,12 +188,6 @@
     }
 }
 
-/*
-- (void)webView:(UIWebView*)webView didFailLoadWithError:(NSError *)error
-{
-}
-*/
-
 - (void)runScript:(NSString *)script
 {
     NSString *result = [webView stringByEvaluatingJavaScriptFromString:script];
