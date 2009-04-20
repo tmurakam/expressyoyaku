@@ -186,7 +186,7 @@
             switch (indexPath.row) {
                 case 0:
                     version = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
-                    cc = [ContainerCell containerCell:[NSString stringWithFormat:@"エクスプレス予約 Version %@", version] tableView:tableView];
+                    cc = [ContainerCell containerCell:[NSString stringWithFormat:@"EX予約ブラウザ Version %@", version] tableView:tableView];
                     break;
                 case 1:
                     cc = [ContainerCell containerCell:@"ヘルプ" tableView:tableView];
