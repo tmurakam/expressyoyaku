@@ -159,12 +159,16 @@
     // オートログイン
     NSRange range = [urlString rangeOfString:@"/expy.jp/member/login/"];
     if (range.location != NSNotFound) {
-        [self runScript:
-                  [NSString stringWithFormat:@"document.getElementById(\"user_id%d\").value=\"%@\"",
-                            type, userid]];
-        [self runScript:
-                  [NSString stringWithFormat:@"document.getElementById(\"password%d\").value=\"%@\"",
-                            type, pass]];
+        if (userid != nil) {
+            [self runScript:
+                    [NSString stringWithFormat:@"document.getElementById(\"user_id%d\").value=\"%@\"",
+                                type, userid]];
+        }
+        if (pass != nil) {
+            [self runScript:
+                    [NSString stringWithFormat:@"document.getElementById(\"password%d\").value=\"%@\"",
+                                type, pass]];
+        }
     }
     
     // ページ修正
