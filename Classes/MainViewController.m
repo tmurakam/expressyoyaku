@@ -56,15 +56,15 @@
     barButtonForward.enabled = NO;
 #endif
     
+    PinController *pinController = [[[PinController alloc] init] autorelease];
+    [pinController firstPinCheck:self];
+    
     //[activityIndicator startAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
     NSURL *url = [NSURL URLWithString:@"http://expy.jp/member/login/index.html"];
     NSURLRequest *req = [[[NSURLRequest alloc] initWithURL:url] autorelease];
     [webView loadRequest:req];
-
-    PinController *pinController = [[[PinController alloc] init] autorelease];
-    [pinController firstPinCheck:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -198,7 +198,7 @@
 - (void)runScript:(NSString *)script
 {
     NSString *result = [webView stringByEvaluatingJavaScriptFromString:script];
-    //NSLog(@"%@ -> %@", script, result);
+    NSLog(@"%@ -> %@", script, result);
 }
 
 - (IBAction)doConfig:(id)sender
