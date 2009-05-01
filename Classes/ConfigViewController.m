@@ -36,6 +36,7 @@
 #import "ConfigViewController.h"
 #import "ContainerCell.h"
 #import "Config.h";
+#import "Pin.h"
 
 @implementation ConfigViewController
 
@@ -149,7 +150,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
     case 0:
-        return 3;
+        return 4;
 
     case 1:
         return 2;
@@ -178,6 +179,10 @@
                 case 2:
                     cc = [ContainerCell containerCell:@"パスワード" tableView:tableView];
                     cc.attachedView = passwordField;
+                    break;
+                case 3:
+                    cc = [ContainerCell containerCell:@"PIN" tableView:tableView];
+                    cc.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                     break;
             }
             break;
@@ -213,6 +218,11 @@
         v.actionSheetStyle = UIActionSheetStyleDefault;
         [v showInView:self.view];
         [v release];
+    }
+    else if (indexPath.section == 0 && indexPath.row == 3) {
+        // PIN
+        PinController *pinController = [[[PinController alloc] init] autorelease];
+        [pinController modifyPin:self];
     }
     else if (indexPath.section == 1 && indexPath.row == 1) {
         // ヘルプ

@@ -36,6 +36,7 @@
 #import "MainViewController.h"
 #import "ConfigViewController.h"
 #import "Config.h"
+#import "Pin.h"
 
 @implementation MainViewController
 
@@ -62,6 +63,8 @@
     NSURLRequest *req = [[[NSURLRequest alloc] initWithURL:url] autorelease];
     [webView loadRequest:req];
 
+    PinController *pinController = [[[PinController alloc] init] autorelease];
+    [pinController firstPinCheck:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
