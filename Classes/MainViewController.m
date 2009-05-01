@@ -1,6 +1,6 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 /*
-  ExpressYoyaku for iPhone/iPod touch
+  EX Yoyaku Browser for iPhone/iPod touch
 
   Copyright (c) 2009, Takuya Murakami, All rights reserved.
 
@@ -142,14 +142,17 @@
     NSString *pass = config.password;
     int type = config.userType;
 
-#if 0
     // viewport 追加
+#if 0
     [self runScript:
-        @"e = document.getElementById(\"head\");"
+        @"var f1 = window.fames[0];"
+        @"if (f1) { var f2 = f1.frames[0];"
+        @"if (f2) {"
         @"vp = document.createElement(\"meta\");"
         @"vp.setAttribute(\"name\", \"viewport\");"
-        @"vp.setAttribute(\"content\", \"initial-scale=2.0\");"
-        @"e.appendChild(e);"
+        @"vp.setAttribute(\"content\", \"width=320;\");"
+        @"f2.document.getElementById(\"head\").appendChild(e);"
+        @"}}"
      ];
 #endif
     

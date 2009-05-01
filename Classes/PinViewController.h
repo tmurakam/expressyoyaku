@@ -1,6 +1,6 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 /*
-  CashFlow for iPhone/iPod touch
+  EX Yoyaku Browser for iPhone/iPod touch
 
   Copyright (c) 2008, Takuya Murakami, All rights reserved.
 
