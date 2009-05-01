@@ -51,14 +51,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-#if 0
-    barButtonBack.enabled = NO;
-    barButtonForward.enabled = NO;
-#endif
-    
-    PinController *pinController = [[[PinController alloc] init] autorelease];
-    [pinController firstPinCheck:self];
-    
     //[activityIndicator startAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
@@ -69,8 +61,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    //NSLog(@"2:%@", self.modalViewController);
     [super viewWillAppear:animated];
     [self fixPage:nil];
+    //NSLog(@"3:%@", self.modalViewController);
 }
 
 // Override to allow orientations other than the default portrait orientation.

@@ -35,6 +35,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "Pin.h"
 
 @implementation AppDelegate
 
@@ -47,6 +48,9 @@
     // Override point for customization after app launch    
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
+    
+    PinController *pinController = [[[PinController alloc] init] autorelease];
+    [pinController firstPinCheck:viewController];
 }
 
 

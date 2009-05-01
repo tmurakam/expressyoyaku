@@ -133,10 +133,10 @@
 				2899E5210DE3E06400AC0155 /* MainViewController.xib */,
 				3E97AEB40F921FC300C65095 /* ConfigView.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				3E2D50620FAA93CE00EC048B /* PinView.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3E97AE660F921AF600C65095 /* config.png */,
 				3E97AE6B0F921B8E00C65095 /* backward.png */,
-				3E2D50620FAA93CE00EC048B /* PinView.xib */,
 				3E2D50610FAA93CE00EC048B /* NumPadSelected.png */,
 				3E2D50600FAA93CE00EC048B /* NumPadButton.png */,
 			);
