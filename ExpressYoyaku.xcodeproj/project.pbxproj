@@ -15,6 +15,10 @@
 		2899E5220DE3E06400AC0155 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* MainViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MainViewController.m */; };
+		3E2D505F0FAA93B900EC048B /* PinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D505E0FAA93B900EC048B /* PinViewController.m */; };
+		3E2D50630FAA93CE00EC048B /* NumPadButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D50600FAA93CE00EC048B /* NumPadButton.png */; };
+		3E2D50640FAA93CE00EC048B /* NumPadSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D50610FAA93CE00EC048B /* NumPadSelected.png */; };
+		3E2D50650FAA93CE00EC048B /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D50620FAA93CE00EC048B /* PinView.xib */; };
 		3E97AE670F921AF600C65095 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E97AE660F921AF600C65095 /* config.png */; };
 		3E97AE6C0F921B8E00C65095 /* backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E97AE6B0F921B8E00C65095 /* backward.png */; };
 		3E97AE950F921E5E00C65095 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E97AE940F921E5E00C65095 /* ConfigViewController.m */; };
@@ -37,6 +41,11 @@
 		28D7ACF70DDB3853001CB0EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ExpressYoyaku_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressYoyaku_Prefix.pch; sourceTree = "<group>"; };
+		3E2D505D0FAA93B900EC048B /* PinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinViewController.h; sourceTree = "<group>"; };
+		3E2D505E0FAA93B900EC048B /* PinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinViewController.m; sourceTree = "<group>"; };
+		3E2D50600FAA93CE00EC048B /* NumPadButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumPadButton.png; sourceTree = "<group>"; };
+		3E2D50610FAA93CE00EC048B /* NumPadSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumPadSelected.png; sourceTree = "<group>"; };
+		3E2D50620FAA93CE00EC048B /* PinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
 		3E97AE660F921AF600C65095 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config.png; sourceTree = "<group>"; };
 		3E97AE6B0F921B8E00C65095 /* backward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backward.png; sourceTree = "<group>"; };
 		3E97AE930F921E5E00C65095 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
@@ -77,6 +86,8 @@
 				3E97AECC0F92274100C65095 /* ContainerCell.m */,
 				3E97AEFD0F922AB400C65095 /* Config.h */,
 				3E97AEFE0F922AB400C65095 /* Config.m */,
+				3E2D505D0FAA93B900EC048B /* PinViewController.h */,
+				3E2D505E0FAA93B900EC048B /* PinViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -120,6 +131,9 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3E97AE660F921AF600C65095 /* config.png */,
 				3E97AE6B0F921B8E00C65095 /* backward.png */,
+				3E2D50620FAA93CE00EC048B /* PinView.xib */,
+				3E2D50610FAA93CE00EC048B /* NumPadSelected.png */,
+				3E2D50600FAA93CE00EC048B /* NumPadButton.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,6 +196,9 @@
 				3E97AE6C0F921B8E00C65095 /* backward.png in Resources */,
 				3E97AEB50F921FC300C65095 /* ConfigView.xib in Resources */,
 				3E97AFA30F923B5200C65095 /* Icon.png in Resources */,
+				3E2D50630FAA93CE00EC048B /* NumPadButton.png in Resources */,
+				3E2D50640FAA93CE00EC048B /* NumPadSelected.png in Resources */,
+				3E2D50650FAA93CE00EC048B /* PinView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +215,7 @@
 				3E97AE950F921E5E00C65095 /* ConfigViewController.m in Sources */,
 				3E97AECD0F92274100C65095 /* ContainerCell.m in Sources */,
 				3E97AEFF0F922AB400C65095 /* Config.m in Sources */,
+				3E2D505F0FAA93B900EC048B /* PinViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
