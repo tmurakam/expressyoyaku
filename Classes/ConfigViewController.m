@@ -181,7 +181,7 @@
                     cc.attachedView = passwordField;
                     break;
                 case 3:
-                    cc = [ContainerCell containerCell:@"PIN" tableView:tableView];
+                    cc = [ContainerCell containerCell:@"パスコードロック" tableView:tableView];
                     cc.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                     break;
             }

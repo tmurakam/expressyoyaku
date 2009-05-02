@@ -124,7 +124,7 @@
                            initWithTitle:@"エラー"
                            message:[err localizedDescription]
                            delegate:nil 
-                           cancelButtonTitle:NSLocalizedString(@"閉じる", @"") 
+                           cancelButtonTitle:@"閉じる"
                            otherButtonTitles:nil];
         [av show];
         [av release];

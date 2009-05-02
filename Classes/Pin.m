@@ -85,7 +85,7 @@
 
     PinViewController *vc = [self _getPinViewController];
 
-    vc.title = NSLocalizedString(@"PIN確認", @"");
+    vc.title = @"パスコード確認";
     vc.enableCancel = NO;
 
     state = FIRST_PIN_CHECK;
@@ -105,11 +105,11 @@
     if (pin != nil) {
         // check current pin
         state = ENTER_CURRENT_PIN;
-        vc.title = NSLocalizedString(@"PIN確認", @"");
+        vc.title = @"パスコード確認";
     } else {
         // enter 1st pin
         state = ENTER_NEW_PIN1;
-        vc.title = NSLocalizedString(@"新規PIN入力", @"");
+        vc.title = @"新規パスコード入力";
     }
         
     navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -138,7 +138,7 @@
         else if (state == ENTER_CURRENT_PIN) {
             state = ENTER_NEW_PIN1;
             newvc = [self _getPinViewController];        
-            newvc.title = NSLocalizedString(@"新規PIN入力", @"");
+            newvc.title = @"新規パスコード入力";
         }
         break;
 
@@ -146,7 +146,7 @@
         self.newPin = [NSString stringWithString:vc.value]; // TBD
         state = ENTER_NEW_PIN2;
         newvc = [self _getPinViewController];        
-        newvc.title = NSLocalizedString(@"PIN入力(確認)", @"");
+        newvc.title = @"パスコード確認";
         break;
 
     case ENTER_NEW_PIN2:
@@ -165,8 +165,8 @@
     // invalid pin
     if (isBadPin) {
         UIAlertView *v = [[UIAlertView alloc]
-                             initWithTitle:NSLocalizedString(@"PIN不正", @"")
-                             message:NSLocalizedString(@"PINコードが違います.", @"")
+                             initWithTitle:@"パスコード不正"
+                             message:@"パスコードが違います."
                              delegate:nil
                              cancelButtonTitle:@"Close"
                              otherButtonTitles:nil];

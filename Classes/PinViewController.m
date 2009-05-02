@@ -118,6 +118,13 @@
     }
     valueLabel.text = p;
     [p release];
+    
+#if 0
+    if (len >= 4) {
+        [self doneAction:nil];
+        //[delegate pinViewFinished:self isCancel:NO];
+    }
+#endif
 }
 
 - (void)doneAction:(id)sender
