@@ -232,7 +232,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takuya Murakami";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -240,7 +240,8 @@
 				GCC_PREFIX_HEADER = ExpressYoyaku_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = ExpressYoyaku;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2CA744B8-A724-4DB2-9649-5483907F303F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.1.3;
 			};
 			name = Debug;
 		};
@@ -253,6 +254,7 @@
 				GCC_PREFIX_HEADER = ExpressYoyaku_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = ExpressYoyaku;
+				SDKROOT = iphoneos3.1.3;
 			};
 			name = Release;
 		};
@@ -280,6 +282,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = ExpressYoyaku;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DA1F4F20-F073-48BF-8301-82D85D64466D";
+				SDKROOT = iphoneos3.1.3;
 			};
 			name = Distribution;
 		};
@@ -287,14 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takuya Murakami";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2CA744B8-A724-4DB2-9649-5483907F303F";
-				SDKROOT = iphoneos2.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.2.1;
 			};
 			name = Debug;
 		};

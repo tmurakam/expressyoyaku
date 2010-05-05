@@ -143,15 +143,52 @@
     int type = config.userType;
 
     // viewport 追加
+    NSString *vpscript =
+        @"var head = document.getElementById('body');"
+        @"alert(head);"
+        @"var vp = document.createElement('meta');"
+        @"vp.setAttribute('name', 'viewport');"
+        @"vp.setAttribute('content', 'width=320;');"
+        @"document.getElementById('head').appendChild(vp);";
+    
+    NSString *s = 
+       @"var s = document.createElement('script');"
+       //@"s.text = \"%@\";"
+       @"s.src = 'http://tmurakam.dyndns.org/~tmurakam/test.js';"
+       @"document.body.appendChild(s);";
+    
+    NSLog(s);
+    [self runScript:s];
+     
 #if 0
     [self runScript:
-        @"var f1 = window.fames[0];"
-        @"if (f1) { var f2 = f1.frames[0];"
-        @"if (f2) {"
-        @"vp = document.createElement(\"meta\");"
+        @"var vp = document.createElement(\"meta\");"
         @"vp.setAttribute(\"name\", \"viewport\");"
         @"vp.setAttribute(\"content\", \"width=320;\");"
-        @"f2.document.getElementById(\"head\").appendChild(e);"
+        @"var head = window.document.getElementById(\"head\");"
+                                          @"alert(head);"
+        @"if (head == null) {"
+        @"  head = document.createElement(\"head\");"
+        @"  document.appendChild(head);"
+        @"  alert(head);"
+        @"}"
+        @"alert('fuga');"
+        @"head.appendChild(vp);"
+     ];
+#endif
+    
+#if 0
+    [self runScript:
+        @"var f1 = window.frames[0];"
+        @"if (f1) { var f2 = f1.frames[0];"
+        @"if (f2) {"
+        @"var vp = document.createElement(\"meta\");"
+        @"vp.setAttribute(\"name\", \"viewport\");"
+        @"vp.setAttribute(\"content\", \"width=320;\");"
+     @"alert(vp);"
+        @"var hh = f2.document.getElementById(\"head\");"
+        @"alert(hh);"
+        @"f2.document.getElementById(\"head\").appendChild(vp);"
         @"}}"
      ];
 #endif
