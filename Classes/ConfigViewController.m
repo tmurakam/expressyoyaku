@@ -33,6 +33,7 @@
 */
 //  ConfigViewController.m
 
+#import "AppDelegate.h"
 #import "ConfigViewController.h"
 #import "ContainerCell.h"
 #import "Config.h";
@@ -48,7 +49,12 @@
         userIdField = [[self _textInputField:config.userId placeHolder:@"ID" secure:NO] retain];
         passwordField = [[self _textInputField:config.password placeHolder:@"パスワード" secure:YES] retain];
         
-        userTypeField = [[UILabel alloc] initWithFrame:CGRectMake(115, 11, 160, 24)];
+        if (IS_IPAD) {
+            userTypeField = [[UILabel alloc] initWithFrame:CGRectMake(200, 11, 160, 24)];
+        } else {
+            userTypeField = [[UILabel alloc] initWithFrame:CGRectMake(115, 11, 160, 24)];
+        }
+        userTypeField.backgroundColor = [UIColor clearColor];
         [self _updateUserType];
     }
     return self;
@@ -57,7 +63,11 @@
 - (UITextField *)_textInputField:(NSString *)value placeHolder:(NSString *)placeHolder secure:(BOOL)secure
 {
     UITextField *f;
-    f = [[[UITextField alloc] initWithFrame:CGRectMake(115, 12, 160, 24)] autorelease];
+    if (IS_IPAD) {
+        f = [[[UITextField alloc] initWithFrame:CGRectMake(200, 12, 300, 24)] autorelease];
+    } else {
+        f = [[[UITextField alloc] initWithFrame:CGRectMake(115, 12, 160, 24)] autorelease];
+    }
     f.text = value;
     f.placeholder = placeHolder;
     f.secureTextEntry = secure;
@@ -65,6 +75,7 @@
     f.returnKeyType = UIReturnKeyDone;
     f.autocorrectionType = UITextAutocorrectionTypeNo;
     f.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    f.backgroundColor = [UIColor clearColor];
     f.delegate = self;
     return f;
 }
