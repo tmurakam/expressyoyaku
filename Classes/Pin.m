@@ -91,6 +91,9 @@
     state = FIRST_PIN_CHECK;
 
     navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    if (IS_IPAD) {
+        navigationController.modalPresentationStyle = UIModalPresentationPageSheet;
+    }
     [currentVc presentModalViewController:navigationController animated:NO];
 }
 
@@ -113,6 +116,9 @@
     }
         
     navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    if (IS_IPAD) {
+        navigationController.modalPresentationStyle = UIModalPresentationPageSheet;
+    }
     [currentVc presentModalViewController:navigationController animated:YES];
 }
 

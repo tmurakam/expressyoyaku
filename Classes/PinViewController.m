@@ -34,6 +34,7 @@
 
 //#import <AudioToolbox/AudioToolbox.h>
 
+#import "AppDelegate.h"
 #import "PinViewController.h"
 
 @implementation PinViewController
@@ -41,7 +42,11 @@
 
 - (id)init
 {
-    self = [super initWithNibName:@"PinView" bundle:nil];
+    if (IS_IPAD) {
+        self = [super initWithNibName:@"PinView-iPad" bundle:nil];
+    } else {
+        self = [super initWithNibName:@"PinView" bundle:nil];
+    }
     return self;
 }
 
@@ -141,6 +146,10 @@
 
     [value setString:@""];
     valueLabel.text = @"";
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return YES;
 }
 
 @end
