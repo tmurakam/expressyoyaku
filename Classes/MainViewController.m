@@ -151,12 +151,6 @@
         @"vp.setAttribute('content', 'width=320;');"
         @"document.getElementById('head').appendChild(vp);";
     
-    NSString *s = 
-       @"var s = document.createElement('script');"
-       //@"s.text = \"%@\";"
-       @"s.src = 'http://tmurakam.dyndns.org/~tmurakam/test.js';"
-       @"document.body.appendChild(s);";
-    
     NSLog(s);
     [self runScript:s];
      
