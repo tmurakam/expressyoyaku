@@ -143,6 +143,7 @@
     int type = config.userType;
 
     // viewport 追加
+#if 0
     NSString *vpscript =
         @"var head = document.getElementById('body');"
         @"alert(head);"
@@ -151,9 +152,10 @@
         @"vp.setAttribute('content', 'width=320;');"
         @"document.getElementById('head').appendChild(vp);";
     
-    NSLog(s);
-    [self runScript:s];
-     
+    NSLog(vpscript);
+    [self runScript:vpscript];
+#endif
+    
 #if 0
     [self runScript:
         @"var vp = document.createElement(\"meta\");"
