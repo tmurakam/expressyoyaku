@@ -56,7 +56,7 @@
     tlabel.autoresizingMask = 0;//UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [cell.contentView addSubview:tlabel];
 #endif
-    cell.text = title;
+    cell.textLabel.text = title;
     return cell;
 }
 
