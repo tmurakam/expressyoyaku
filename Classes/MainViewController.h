@@ -35,7 +35,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController <UIWebViewDelegate> {
+@interface MainViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate> {
     IBOutlet UIWebView *webView;
 
     //IBOutlet UIBarButtonItem *barButtonForward;
@@ -46,6 +46,9 @@
 - (void)runScript:(NSString *)script;
 
 - (IBAction)doConfig:(id)sender;
+- (IBAction)doActionSheet:(id)sender;
+
+- (void)loadUrl:(NSString *)urlString;
 
 #if 0
 - (IBAction)goForward:(id)sender;

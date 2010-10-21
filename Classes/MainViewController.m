@@ -38,6 +38,8 @@
 #import "Config.h"
 #import "Pin.h"
 
+#define LOGIN_URL       @"http://expy.jp/member/login/index.html"
+
 @implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -54,7 +56,12 @@
     //[activityIndicator startAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
-    NSURL *url = [NSURL URLWithString:@"http://expy.jp/member/login/index.html"];
+    [self loadUrl:LOGIN_URL];
+}
+
+- (void)loadUrl:(NSString *)urlString
+{
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *req = [[[NSURLRequest alloc] initWithURL:url] autorelease];
     [webView loadRequest:req];
 }
@@ -240,6 +247,32 @@
     [self presentModalViewController:nv animated:YES];
     [nv release];
 }
+
+- (IBAction)doActionSheet:(id)sender
+{
+    UIActionSheet *v;
+    v = [[UIActionSheet alloc]
+            initWithTitle:@""
+            delegate:self
+            cancelButtonTitle:@"キャンセル"
+            destructiveButtonTitle:nil
+            otherButtonTitles:@"再ログイン", nil];
+    v.actionSheetStyle = UIActionSheetStyleDefault;
+    [v showInView:self.view];
+    [v release];
+}
+
+#pragma mark ActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)as clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+    case 0:
+        [self loadUrl:LOGIN_URL];
+        break;
+    }
+}
+
 
 #if 0
 - (IBAction)goForward:(id)sender
